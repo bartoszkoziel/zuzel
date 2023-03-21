@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rzurzel</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #root {
+            margin: 1em;
+            width: 1024px;
+            height: 512px;
+            display: flex;
+        }
+
+        #canvas1 {
+            width: 100%;
+            height: 100%;
+            border: 1px black solid;
+        }
+
+        #retry {
+            display: none;
+            top: 0;
+            right: 0;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+
+
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #restart {
+            padding: 1em;
+            color: aliceblue;
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: 700;
+            border-radius: 10px;
+            background-color: rgb(165, 42, 42);
+        }
+
+        #restart:hover {
+            background-color: rgb(203, 46, 46);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="retry">
+        <div id="restart">
+            <p>RESTART</p>
+        </div>
+    </div>
+    <div id="root"><canvas id="canvas1" width="1024" height="512"></canvas></div>
+    <p id="laps">LAPS: 0</p>
+    <p id="start">PRESS ENTER TO START</p>
+    <script src="zuzel.js"></script>
+</body>
+
+</html>
